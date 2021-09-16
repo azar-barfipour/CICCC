@@ -1,0 +1,20 @@
+var a= 5 + 5 > 10   typeof> number
+
+var a= 5 + "5" > 55   typeof> string
+
+var a= 5 * "5" > 25   typeof> number
+
+//Comparison Operation
+
+var a=5
+var b="5"
+console.log(a==b)> true  // just value
+console.log(a===b)> false // value and datatype
+
+console.log(a!=b)> false
+console.log(a!==b)> true
+
+
+
+
+

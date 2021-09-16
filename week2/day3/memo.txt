@@ -1,0 +1,22 @@
+Ctrl + shift + i > inspect element
+
+if(one passed){
+    if(1 > 2){
+        log(matt)
+    }
+    else{
+        log(simon)
+    }
+}
+
+alert('lets code')
+prompt('lets code')
+
+window in the console
+
+
+google bigo
+google JSON
+
+
+JSON comes with "" except numbers and boolean
