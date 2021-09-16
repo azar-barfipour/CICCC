@@ -1,0 +1,10 @@
+//Object:
+
+-property
+-events
+-method
+
+pascal case: HourNow >> fisrt letter of each words is capital 
+camel case: hourNow 
+
+{} > code blocks

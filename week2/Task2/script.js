@@ -24,8 +24,38 @@ const students = [
 
 }
 ]
+
 const pass=[91,81,71,61,51]
 const degrees=['A','B','C','D','E']
+
+function calculateTotal(score1,score2){
+    let total= score1 + score2
+    return total
+}
+//  console.log(calculateTotal(students[0].score1,students[0].score2))
+for(let student of students){
+    let calculateTotalForEachOne=calculateTotal(student.score1,student.score2)
+    // console.log(calculateTotalForEachOne)
+}
+function evaluation (){
+    for(let i=0; i< students.length; i++){
+       let eachTotal= calculateTotal(students[i].score1,students[i].score2)
+       if(eachTotal >= pass[4]){
+        //    console.log(`pass the exam`)
+           for(let x=0; x< pass.length; x++){
+               if(eachTotal >= pass[x]){
+                   console.log(`${students[i].name} ${degrees[x]}`)
+                   break;
+               }
+           }
+       }else{
+           console.log(`${students[i].name} failed`)
+       }
+    }
+}
+
+evaluation()
+
 
 students.forEach(function(param){
     let total=param.score1 + param.score2
