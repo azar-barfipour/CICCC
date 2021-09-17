@@ -1,0 +1,22 @@
+//functions
+func(3,5) => hard code
+
+var x=3
+var y=5
+func(x,y) => dinamic
+
+
+//anonymous functions
+var area = functions(x,y){//function expression can not call before function decleration
+return
+}
+
+//this object
+if it's in the globaly in the function it refers to window
+if it's in method of a object it refers to properies of that onject
+
+//
+call stack => LIFO (last in first out)
+
+//string
+.trim() => removed spaces before or after the string
