@@ -15,15 +15,24 @@ function isDescending(arr) {
   return true;
 }
 function isSort(arr) {
+  //fisrt approch
   if (isAscending(arr) === false && isDescending(arr) === false) {
-    return false;
+    return "Not Sorted";
   } else if (isAscending(arr) === true) {
-    return true;
+    return "Ascending";
   } else if (isDescending(arr) === true) {
-    return true;
+    return "Descending";
   }
 }
 
+function isSort(arr) {
+  //second approch
+  if (isAscending(arr) === false && isDescending(arr) === false) {
+    return false;
+  } else {
+    return true;
+  }
+}
 console.log(isSort([]));
 console.log(isSort([42]));
 console.log(isSort([39, 42]));
