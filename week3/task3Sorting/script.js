@@ -15,18 +15,19 @@ function isDescending(arr) {
   return true;
 }
 function isSort(arr) {
-  console.log(arr);
   if (isAscending(arr) === false && isDescending(arr) === false) {
-    return "not sorted";
+    return false;
   } else if (isAscending(arr) === true) {
-    return "Ascending";
+    return true;
   } else if (isDescending(arr) === true) {
-    return "Descending";
+    return true;
   }
 }
 
-console.log(isSort([1, 2, 3, 10, 11, 12]));
+console.log(isSort([]));
+console.log(isSort([42]));
+console.log(isSort([39, 42]));
+console.log(isSort([42, 39]));
 console.log(isSort([1, 2, 3, 4, 5]));
 console.log(isSort([5, 4, 3, 2, 1]));
-console.log(isSort([1, 2, 3, 10, 4, 5]));
-console.log(isSort([1, 2, 3, 10, 11, 12]));
+console.log(isSort([1, 5, 2]));
