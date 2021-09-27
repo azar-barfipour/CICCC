@@ -1,23 +1,31 @@
-function isSorted(arr) {
-  let isDescending = true;
-  let isAscending = true;
-
-  for (let i = 1; i < arr.length; i++) {
-    let v1 = arr[i - 1];
-    let v2 = arr[i];
-
-    if (v1 < v2) {
-      isDescending = false;
-    }
-
-    if (v1 > v2) {
-      isAscending = false;
+//I = 1
+// V = I * 5
+// X = V * 2
+// L = X * 5
+// C = L * 2
+// D = C * 5
+// M = D * 2
+// T = M * 5
+//"IV"
+var romanToInt = function (s) {
+  let currentValue = 0;
+  for (let char of s) {
+    if (char === "I") {
+      // do something
+      currentValue = 1;
+    } else if (char === "V") {
+      // do something
+      currentValue = currentValue * 5;
+    } else if (char === "X") {
+      // do something
+    } else if (char === "L") {
+      // do something
+    } else if (char === "C") {
+      // do something
+    } else if (char === "D") {
+      // do something
+    } else if (char === "M") {
+      // do something
     }
   }
-  return isAscending || isDescending;
-}
-
-console.log(isSorted([]));
-console.log(isSorted([1, 2, 3]));
-console.log(isSorted([3, 2, 1]));
-console.log(isSorted([3, 5, 1]));
+};
