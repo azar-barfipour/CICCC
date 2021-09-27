@@ -1,1 +1,5 @@
 //when number of operation stay the same thats constent
+
+//for nested for loop we use O(n*n)
+
+//for 2 arguments functions we use O(n+m)
