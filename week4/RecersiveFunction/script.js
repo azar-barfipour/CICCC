@@ -16,21 +16,28 @@ function power(base, ex) {
 console.log(power(10, 4));
 
 //Recursive Function productOfArray
-// function productOfArray(arr) {
-//   console.log(arr);
-//   if (arr.length === 0) {
-//     return 1;
-//   }
-//   return arr[arr.length] * productOfArray(arr[arr.length - 1]);
-// }
-const productOfArray = ([first, ...last]) => {
-  if (first === undefined) {
+function productOfArray(arr) {
+  if (arr.length === 0) {
     return 1;
   }
-  return first * productOfArray(last);
-};
+  return arr[0] * productOfArray(arr.slice(1));
+}
+//Second Recursive Function productOfArray
+// const productOfArray = ([first, ...last]) => {
+//   if (first === undefined) {
+//     return 1;
+//   }
+//   return first * productOfArray(last);
+// };
 
 console.log(productOfArray([1, 1, 2, 3]));
+//Recursive Function reverse teacher approch
+// function reverse(str) {
+//   if (str.length === 1) {
+//     return str;
+//   }
+//   return reverse(str.slice(1)) + str[0];
+// }
 
 //Recursive Function reverse
 function reverse(str) {
@@ -42,6 +49,7 @@ function reverse(str) {
 }
 
 console.log(reverse("Azar"));
+console.log(reverse("hello"));
 
 //Easy way ;)
 // function isPalindrome(str) {
@@ -55,17 +63,23 @@ console.log(reverse("Azar"));
 
 // console.log(isPalindrome("amanaplanacanalpanama"));
 
-//Recursive Function isPalindrome
+//Recursive Function isPalindrome teacher approch
 function isPalindrome(str) {
-  if (str.length === 1) {
-    return true;
-  }
-  if (str.split("").pop() === str.split("").shift()) {
-    return isPalindrome(str.substring(1, str.length - 1));
-  } else {
-    return false;
-  }
+  if (str.length === 1) return true;
+  if (str.length === 2) return str[0] === str[1];
+  if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
 }
+//Recursive Function isPalindrome
+// function isPalindrome(str) {
+//   if (str.length === 1) {
+//     return true;
+//   }
+//   if (str.split("").pop() === str.split("").shift()) {
+//     return isPalindrome(str.substring(1, str.length - 1));
+//   } else {
+//     return false;
+//   }
+// }
 console.log(isPalindrome("amanaplanacanalpanama"));
 console.log(isPalindrome("a"));
 console.log(isPalindrome("azar"));
